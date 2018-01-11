@@ -151,6 +151,15 @@ a.pure-menu-heading{
   border-radius: 25px;
 }
 
+.edit:hover, .delete:hover, .edit:visited, .delete:visited {
+  text-decoration: none;
+}
+
+.edit, .delete {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .okDisplay {
   display: none;
   font-size: 40px;

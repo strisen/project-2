@@ -75,6 +75,8 @@ https://smrtdelaytracker.herokuapp.com/
 
 ![](https://raw.githubusercontent.com/strisen/project-2/master/public/wireframes/mainframe.png)
 
+![](https://raw.githubusercontent.com/strisen/project-2/master/public/wireframes/announceframe.png)
+
 
 **User Stories**
 

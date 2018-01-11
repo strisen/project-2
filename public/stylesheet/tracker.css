@@ -343,16 +343,26 @@ a.pure-menu-heading{
  * -- PHONE MEDIA QUERIES --
  */
 @media (max-width: 600px) {
-    .banner {
-        height: 100px;
-    }
-    .banner-head {
-        font-size: 3em;
-    }
-    .aHead {
-      font-size: 0.7em;
-    }
-    .fillIn {
-      width: 300px;
-    }
+  .announceDisplay {
+    font-size: 0.7em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .announceWindow {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .banner {
+      height: 100px;
+  }
+  .banner-head {
+      font-size: 3em;
+  }
+  .aHead {
+    font-size: 0.7em;
+  }
+  .fillIn {
+    width: 300px;
+  }
 }

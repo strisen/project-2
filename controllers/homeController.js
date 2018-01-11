@@ -1,4 +1,5 @@
 const Announcement = require('../models/announcement')
+const moment = require('moment-timezone')
 
 exports.home = (req, res) => {
   Announcement.find({}, (err, announcements) => {
@@ -16,9 +17,15 @@ exports.create = (req, res) => {
     res.redirect('/announce')
   }
   else {
+    
+    let announceDate = new Date()
+    let sgDate = moment.tz(announceDate, 'Asia/Singapore')
+    let fromAnnounceDate = moment(sgDate).format('MMMM Do YYYY, h:mm:ss a')
+
     Announcement.create({
       content : req.body.content,
-      postedBy : req.user.displayName
+      postedBy : req.user.displayName,
+      datePosted : fromAnnounceDate
     }, (err, createdAnnouncement) => {
       if (err) {
         req.redirect('/announce', { user: req.user })

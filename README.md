@@ -75,14 +75,17 @@ The authentication is necessary to facilitate the implementation of an annouceme
 
 ### Functions / Code used
 
-* getLocalDate()
+* **getLocalDate()**
+
 Due to Twitter storing the date/time of tweets in a fairly unique format, rearrangement of the date format was required before utilising momentJS to convert it to a desired local date format or in terms of time from now.
 
-* newLineCheck()
+* **newLineCheck()**
+
 Based on the tweet data, 2 separate checks, one for station name and another for line name, are run on the tweet text so as to verify the train line that this tweet is referring to.
 
-* tweet.get('search/tweets', {q: ...}, function (err, data, res) {...}
-This allows me to run a search through the Twitter Search API for tweets meeting my query parameters.
+* **tweet.get('search/tweets', {q: ...}, function (err, data, res) {...}**
+
+The code above from the Twitter API Client allows me to run a search through the Twitter Search API for tweets meeting my query parameters.
 
 ## Acknowledgments
 

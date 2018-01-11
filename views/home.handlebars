@@ -11,7 +11,6 @@
   {{/if }}
 </div>
 
-
 <!-- Start of Line Tables -->
 <div class="l-content">
   <div class="line-tables pure-g">
@@ -91,3 +90,12 @@
     Train Delay Reports are consolidated here based on Twitter Standard Search API.
   </p>
 </div>
+
+<script>
+// Auto refresh every 5 minutes
+  clearInterval()
+
+  setInterval(function () {
+    window.location.reload()
+  }, 300000)
+</script>

@@ -13,6 +13,16 @@
 </head>
 <body>
 
+  <!-- Flash Messages to be displayed -->
+  {{#if alerts.error}}
+    {{#each alerts.error as |msg|}}
+      <div class="alert alert-danger alert-dismissable fade in alert-connect">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Error!</strong> {{msg}}
+    </div>
+    {{/each}}
+  {{/if}}
+
   {{#if alerts.success}}
     {{#each alerts.success as |msg|}}
       <div class="alert alert-success alert-dismissable fade in alert-connect">

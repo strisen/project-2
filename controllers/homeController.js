@@ -9,15 +9,16 @@ exports.home = (req, res) => {
 }
 
 exports.create = (req, res) => {
-  req.checkBody('content', 'Content field is too long.').isLength({ max: 80 })
+  req.checkBody('content', 'Content field is too long.').isLength({ max: 50 }).notEmpty()
 
   let errors = req.validationErrors()
   console.log(errors)
   if (errors) {
+    req.flash('error', 'Announcement field is empty or too long.')
     res.redirect('/announce')
   }
   else {
-    
+
     let announceDate = new Date()
     let sgDate = moment.tz(announceDate, 'Asia/Singapore')
     let fromAnnounceDate = moment(sgDate).format('MMMM Do YYYY, h:mm:ss a')

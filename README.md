@@ -7,13 +7,21 @@
 Clone the project onto your local server/machine, and have the following information in your .env file:
 
 * SESSION_SECRET
-* TWITTER_CONSUMER_KEY
-* TWITTER_CONSUMER_SECRET
-* TWITTER_ACCESS_TOKEN
-* TWITTER_ACCESS_TOKEN_SECRET
-* TWITTER_CALLBACK_URL_LIVE
+* LOCAL_CONSUMER_KEY
+* LOCAL_CONSUMER_SECRET
+* LOCAL_ACCESS_TOKEN
+* LOCAL_ACCESS_TOKEN_SECRET
+* TWITTER_CALLBACK_URL_LOCAL
 
-Create a dbConfig.js file in the helpers folder with the information for your mongoDB server.
+Create a dbConfig.js file in the helpers folder with the information for your mongoDB server as per below:
+
+```
+module.exports = {
+  'urllive' : (Your mongoDB url here)
+}
+```
+
+After which, perform the following command in terminal to install the required modules:
 
 ```
 yarn install
@@ -86,6 +94,11 @@ Based on the tweet data, 2 separate checks, one for station name and another for
 * **tweet.get('search/tweets', {q: ...}, function (err, data, res) {...}**
 
 The code above from the Twitter API Client allows me to run a search through the Twitter Search API for tweets meeting my query parameters.
+
+## Future Improvements
+
+* To further optimise for Twitter API Rate Limits
+* To improve on the search parameters to reduce false positives
 
 ## Acknowledgments
 

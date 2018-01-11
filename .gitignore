@@ -1,0 +1,6 @@
+node_modules
+*.zip
+.env
+dbConfig.js
+yarn.lock
+Wireframe.pptx

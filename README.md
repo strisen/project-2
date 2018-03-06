@@ -1,5 +1,11 @@
 # SMRT Delay Tracker
 
+## Live Version
+
+Current Build:
+
+https://smrtdelaytracker.herokuapp.com/
+
 ## Getting Started
 
 ### Prerequisites
@@ -45,12 +51,6 @@ To make an announcement, click on the Announcements option and you will be direc
 
 Simply key in the announcement in the text box provided, and click submit when done. The announcement will then be uploaded to the database and be rendered on both the main tracker page and the Announcements page.
 
-## Live Version
-
-Current Build:
-
-https://smrtdelaytracker.herokuapp.com/
-
 ## Built With
 
 * HTML
@@ -59,6 +59,7 @@ https://smrtdelaytracker.herokuapp.com/
 * jQuery
 * connect-flash
 * twit
+* Sockets
 * momentJS
 * passportJS
 * Mongoose
